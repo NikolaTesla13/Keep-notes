@@ -14,13 +14,13 @@ export async function writeContent(content, name) {
     var fs = require('fs');
     // var oldContent = fs.readFileSync("./notes/" + name + ".txt", 'utf8');
     // console.log(oldContent);
-    fs.writeFileSync("./notes/" + name + ".txt", content);
+    fs.writeFileSync("/usr/lib/node_modules/keep-notes/notes/" + name + ".txt", content);
 }
 
 export async function checkContent(name) {
     var fs = require('fs');
     try {
-        var oldContent = fs.readFileSync("./notes/" + name + ".txt", 'utf8');
+        var oldContent = fs.readFileSync("/usr/lib/node_modules/keep-notes/notes/" + name + ".txt", 'utf8');
         console.log(oldContent);
     } catch(e) {
         console.log(chalk.red.bold("ERROR 404"));
@@ -32,10 +32,10 @@ export async function checkContent(name) {
 export async function continueContent(content, name, options) {
     var fs = require('fs');
     try {
-        var oldContent = fs.readFileSync("./notes/" + name + ".txt", 'utf8');
+        var oldContent = fs.readFileSync("/usr/lib/node_modules/keep-notes/notes/" + name + ".txt", 'utf8');
         console.log("This is the old content: \n" + oldContent);
         var newContent = await askForNoteContent(options);
-        fs.writeFileSync("./notes/" + name + ".txt", newContent);
+        fs.writeFileSync("/usr/lib/node_modules/keep-notes/notes/" + name + ".txt", newContent);
     } catch(e) {
         console.log(chalk.red.bold("ERROR 404"));
         process.exit(1);
