@@ -1,6 +1,6 @@
 {
   "name": "keep-notes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli for taking notes",
   "main": "src/main.js",
   "bin": {
