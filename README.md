@@ -4,7 +4,7 @@ This package simplify a lot taking notes in the terminal.
 
 # How to use it?
 
-Just type in terminal `keep-notes` and follow the guide.
+Just type in terminal `sudo keep-notes` and follow the guide.
 
 # How to install it?
 `npm install -g keep-notes`
